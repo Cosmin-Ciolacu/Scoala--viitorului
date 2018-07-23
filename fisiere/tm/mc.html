@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery.js"></script>
+    <title>Pagina de pornire</title>
+    <style>
+        #header {
+            background: url(img/Miscari-compuse.jpg);
+            background-size: cover;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="mySidenav" class="meniu">
+        <a href="javascript:void(0)" class="closebtn" onclick="inchidere()">&times;</a>
+        <div style="overflow-y:auto;height:90%;">
+        <h2 style="color:#aa4b41;font-weith: 150;">Teme propuse</h2>
+        <a href="mru.html">Tema 1: Mişcarea rectilinie şi uniformă </a>
+        <a href="mruv.html">Tema 2: Mişcarea rectilinie uniform variată</a>
+        <a href="mcgu.html">Tema 3: Mişcări în câmp gravitaţional uniform</a>
+        <a href="mc.html">Tema 4: Mişcări compuse</a>
+        <a href="mcirc.html">Tema 5: Mişcarea circulară</a>
+        <a href="mo.html">Tema 6: Mişcarea oscilatorie </a>
+        <h2 style="color:#aa4b41;font-weith: 150;">Laborator Virtual</h2>
+        <a href="lab.html">Catre laboratorul vitrual </a>
+        <h2 style="color:#aa4b41;font-weith: 150;">Teste</h2>
+        <a href="test.html">Catre teste</a>
+        </div>
+    </div>
+    <div id="header">
+        <span style="font-size:30px;cursor:pointer;color:#c99e10;position:fixed; /*float:left*/left:0;" onclick="deschidere()">&#9776; Meniu</span>
+    </div>
+    <div class="container">
+        <div id="text1">
+            <h2>
+                Mişcări relativ complicate, cum ar fi aruncarea corpurilor pe orizontală, sau pe oblică, pot fi studiate ca fiind compuse
+                din două mişcări mai simple şi anume o mişcare uniformă pe orizontală şi o mişcare accelerată pe verticală.
+                Această descompunere a mişcărilor complexe în mişcări simple se bazează pe concluzii experimentale care conduc
+                la principiul independenţei mişcărilor. Conform acestui principiu, dacă un punct material este supus mai
+                multor mişcări, atunci atingerea punctului final al traiectoriei nu depinde de faptul că mişcările se execută
+                concomitent sau într-o ordine oarecare. Posibilitatea compunerii vectorilor deplasare, vectorilor viteză
+                sau acceleraţie este o consecinţă a acestui principiu.
+            </h2>
+        </div>
+        <div id="text2">
+            <h1>
+                Aruncarea pe orizontală a corpurilor
+            </h1>
+            <h2>
+                Fie un corp, lansat cu viteza iniţială v
+                <sub>0</sub> pe direcţie orizontală, de la înălţimea H.
+            </h2>
+            <h2 id="redtext">
+                <b class="italic">Mişcarea corpului va fi descompusă în două mişcări ce se desfăşoară simultan, dacă nu ţinem seama de rezistenţa
+                    aerului</b>
+                <ul>
+                    <li>Pe direcţia Ox mişcarea este rectilinie uniformă.</li>
+                    <li>Pe direcţia Oy mişcarea este uniform accelerată (a=g), sub acţiunea greutăţii (cădere liberă).</li>
+                </ul>
+            </h2>
+            <p align="center">
+                <img src="img/img36.png" />
+                <img src="img/img37.png" />
+            </p>
+        </div>
+        <div id="text3">
+            <h2>
+                Legile mişcării după Ox si Oy se exprimă conform relaţiilor:<br>
+                <center><img src="img/img38.png" /></center>
+                <ul>
+                    <li>
+                        Ecuaţia traiectoriei se obţine eliminând timpul t între ecuaţiile x(t) si y(t) şi rezultă
+                        <b id="redtext">ecuaţia unei parabole:<div style="font-size:30px;font-weight: 100;"></b> y(x)=gx
+                        <sup>2</sup>/(2v
+                        <sub>0</sub>
+                        <sup>2</sup>)</div>
+                    </li>
+                    <li>
+                        În momentul când corpul ajunge la sol: y=0, x=b=maxim, se numeşte
+                        <b id="redtext" class="italic">bătaie</b>, având expresia:<br><div style="font-size:30px;font-weight: 100;">b=v
+                        <sub>0</sub>(2H/g)
+                        <sup>1/2</sup></div>
+                    </li>
+                    <li>
+                        <b id="redtext" class="italic">Timpul de mişcare</b> al corpului se deduce din ecuaţia ordonatei, impunând condiţia ca :
+                        <img src="img/img39.png"/>
+                    </li>
+                    <li>
+                        <b id="redtext" class="italic">Viteza finală </b>cu care corpul ajunge la sol are două componente:
+                        <ul>
+                            <li> Ox: componenta orizontală egală cu viteza de lansare v
+                                <sub>x</sub> = v
+                                <sub>0</sub>
+                            </li>
+                            <li> Oy: componenta verticală datorată câmpului gravitaţional
+                                <img src="img/img40.png" align="middle"/>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b id="redtext" class="italic">Viteza de cădere (viteza finală)</b> se poate calcula astfel:
+                        <img src="img/img41.png" align="middle"/>
+                    </li>
+                    <li>Unghiul sub care se face căderea corpului depinde de viteza de lansare şi de înălţimea (H)de la care
+                        este lansat corpul:
+                        <img src="img/img42.png" />
+                    </li>
+                </ul>
+
+            </h2>
+            <h2>
+                &#x25BA; Observaţie: Studiul mişcării unui electron/ion care se deplasează cu viteza v0, paralelă cu plăcile unui condensator
+                între care există un câmp electric E=Ud, se poate aborda în acelaşi mod cu aruncarea pe orizontală. Acceleraţia
+                gravitaţională g este înlocuită cu a=eE/m, unde e este sarcina electrică şi m este masa particulei considerate.
+                Studiul devierii în câmp electric permite determinarea sarcinii specifice e/m.
+            </h2>
+        </div>
+        <div id="text3">
+            <h1>Auncarea pe oblică a corpurilor</h1>
+            <p align="center">
+                <img src="img/img43.png" />
+            </p>
+            <h2>
+                Considerăm un corp lansat cu viteza iniţială v
+                <sub>0</sub> care formează unghiul &alpha; cu direcţia orizontală (suprafaţa Pământului).
+                <br />
+                <b id="redtext" class="italic">Mişcarea corpului are loc in planul xOy si va fi descompusă în două mişcări care se desfăşoară simultan:</b>
+                <ul>
+                    <li>
+                        <b id="redtext">Pe direcţia Ox mişcarea este rectilinie uniformă cu viteza iniţială </b>v
+                        <sub>0x</sub> = v
+                        <sub>0</sub>cos&alpha; = ct
+                    </li>
+                    <li>
+                        <b id="redtext">Pe direcţia Oy mişcarea este uniform încetinită cu viteza iniţială </b>v
+                        <sub>0y</sub> = v
+                        <sub>0</sub>sin&alpha;
+                    </li>
+                </ul>
+            </h2>
+        </div>
+        <div id="text4">
+            <h2 class="italic">
+                <b id="redtext">Ecuaţiile parametrice ale mişcării</b> (coordonatele mobilului la momentul t) sunt:
+            </h2>
+            <img src="img/img44.png" />
+            <h2>
+                <b id="redtext" class="italic">Proiecţiile vitezei </b> la momentul t sunt:
+                <img src="img/img45.png" />
+            </h2>
+        </div>
+        <div id="text5">
+            <h2>
+                <b id="redtext" class="italic">Ecuaţia traiectoriei </b> se obţine eliminând timpul t între ecuaţiile parametrice ale mişcării:
+                <img src="img/img46.png"
+                />
+                <br /> Relaţia este de forma:y(x) = bx-ax
+                <sup>2</sup>unde a şi b sunt două constante, deci
+                <b class="italic" id="redtext">traiectoria mobilului este un arc de parabolă </b> cu concavitatea în jos (a
+                <0). </h2>
+                    <h2>
+                        Menţionăm că nu s-a ţinut seama de frecarea cu aerul. În cazul când se ţine seama de frecare, traiectoria are aspectul unei
+                        curbe, purtând denumirea de curbă balistică.
+                    </h2>
+                    <h2>
+                        <b class="italic" id="redtext">Înălţimea maximă </b> se obţine impunând condiţia de oprire (v
+                        <sub>f</sub>) în formula lui Galilei:
+                        <img src="img/img47.png" />
+                    </h2>
+                    <h2>
+                        <b class="italic" id="redtext">Timpul necesar atingerii înalţimii maxime </b> se obţine impunând condiţia de oprire (v
+                        <sub>f</sub>) în legea vitezei după Oy:
+                        <img src="img/img48.png" align="center"/>
+                    </h2>
+                    <h2>
+                        <b id="redtext" class="italic">Timpul total de deplasare va fi: <div style="display:inline-block;margin-left:-50px;font-size: 30px;font-weight:100;"></b>t=2t
+                        <sub>u</sub></div>
+                    </h2>
+                    <h2>
+                        <b id="redtext" class="italic">Bătaia (distanţa maximă străbătută pe orizontală) </b>are expresia:
+                        <img src="img/img49.png" align="center"/>
+                    </h2>
+        </div>
+    </div>
+</body>
+<script src="js/mc.js"></script>
+
+</html>

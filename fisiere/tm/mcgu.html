@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery.js"></script>
+    <title>Pagina de pornire</title>
+    <style>
+        #header {
+            background: url(img/Miscari-in-camp-gravitational-uniform.jpg);
+            background-size: cover;
+        }
+
+        #text1,
+        #text2,
+        #text3,
+        #text4,
+        #text5,
+        #text6,
+        #text7,
+        #text8,
+        #text9 {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="mySidenav" class="meniu">
+        <a href="javascript:void(0)" class="closebtn" onclick="inchidere()">&times;</a>
+        <div style="overflow-y:auto;height:90%;">
+        <h2 style="color:#aa4b41;font-weith: 150;">Teme propuse</h2>
+        <a href="mru.html">Tema 1: Mişcarea rectilinie şi uniformă </a>
+        <a href="mruv.html">Tema 2: Mişcarea rectilinie uniform variată</a>
+        <a href="mcgu.html">Tema 3: Mişcări în câmp gravitaţional uniform</a>
+        <a href="mc.html">Tema 4: Mişcări compuse</a>
+        <a href="mcirc.html">Tema 5: Mişcarea circulară</a>
+        <a href="mo.html">Tema 6: Mişcarea oscilatorie </a>
+        <h2 style="color:#aa4b41;font-weith: 150;">Laborator Virtual</h2>
+        <a href="lab.html">Catre laboratorul vitrual </a>
+        <h2 style="color:#aa4b41;font-weith: 150;">Teste</h2>
+        <a href="test.html">Catre teste</a>
+        </div>
+    </div>
+    <div id="header">
+        <span style="font-size:30px;cursor:pointer;color:#c99e10;position:fixed; /*float:left*/left:0;" onclick="deschidere()">&#9776; Meniu</span>
+    </div>
+    <div class="container">
+        <div id="text1">
+            <h2>
+                Mişcările în câmp gravitaţional uniform sunt mişcări rectilinii uniform variate, cu acceleraţia gravitaţională g=9,8m/s
+                <sup>2</sup>,având unele caracteristici specifice.
+            </h2>
+        </div>
+        <div id="text2">
+            
+            <h1>
+                Căderea liberă
+            </h1>
+            <div id="indent"><h2>
+                Cel mai la îndemână exemplu de mişcare cu acceleraţie constantă este cel al unui corp care cade pe Pământ de la o înălţime
+                oarecare h, suficient de mică astfel încât acceleraţia gravitaţională (a=g=const.) să ramână constantă în
+                timpul căderii. Dacă nu se ţine cont de rezistenţa aerului şi nici de variaţia lui g cu h, avem o mişcare
+                idealizată care poartă numele de „cădere liberă”.
+            </h2>
+            <h2 id="redtext" class="italic">
+                Un corp lăsat să cadă liber (v
+                <sub>0</sub> = 0) de la înălţimea H, va executa o mişcare accelerată cu acceleraţia a=g, sub acţiunea propriei
+                greutăţi<br>
+                <center><img src="img/img30.png" /></center>
+            </h2>
+        </div></div>
+
+        <div id="text2">
+            <div id="indent"><h2>
+                Legile mişcării în căderea liberă a corpurilor se exprimă conform relaţiilor:
+                <ul>
+                    <li>
+                        <b id="redtext" class="italic"> Legea vitezei: </b>v(t)=gt
+                    </li>
+                    <li>
+                        <b id="redtext" class="italic"> Legea spaţiului: </b> y(t) = gt
+                        <sup>2</sup>/2
+                    </li>
+                    <li>
+                        <b id="redtext" class="italic"> Formula lui Galilei: </b> v
+                        <sup>2</sup>=2gy
+                    </li>
+                </ul>
+            </h2>
+            <h2>
+                <b id="bluetext"> &#x25BA; Observaţii:</b>
+                <ul>
+                    <li>
+                        <b id="redtext" class="italic"> Viteza finală : </b>la suprafaţa solului (y=0) se obţine din formula lui Galilei: v
+                        <sub>f</sub> = (2gH)
+                        <sup>1/2</sup>
+                    </li>
+                    <li>
+                        <b id="redtext" class="italic"> Timpul de cădere : </b>al corpului se află din legea spaţiului: t
+                        <sub>c</sub> = (2H/g)
+                        <sup>1/2</sup>
+                    </li>
+                </ul>
+            </h2>
+        </div></div>
+        <div id="text3">
+            <h1>
+                Aruncarea corpurilor pe verticală de jos în sus
+            </h1>
+            <div id="indent"><h2 class="italic">
+                Aruncarea corpurilor pe verticală de jos în sus este o mişcare dublă formată dintr-o urcare urmată de o cădere liberă de
+                la înălţimea maximă H la care a ajuns corpul.
+            </h2>
+            <h2>
+                Se demonstrează că:
+                <b class="italic">
+                    t
+                    <sub>u</sub> = t
+                    <sub>c</sub> şi v
+                    <sub>c</sub> = v
+                    <sub>u</sub>
+                </b>
+            </h2>
+            <p align="center">
+                <img src="img/img31.png" />
+            </p>
+            <h2>Considerăm un corp care este lansat de jos în sus cu viteza iniţială v<sub>0</sub>. </h2><h2>Dacă neglijăm forţele de frecare cu aerul, corpul efectuează în timpul urcării o mişcare rectilinie
+                uniform încetinită cu acceleraţia a= -g. Viteza corpului scade până la anulare, când se atinge înălţimea
+                maximă.</h2>
+            <h2 class="italic">
+                Legile mişcării în aruncarea pe verticală de jos în sus se exprimă conform relaţiilor:
+                <ul>
+                    <li>
+                        <b id="redtext" class="italic"> Legea vitezei: </b>v(t) = v
+                        <sub>0</sub>-gt
+                    </li>
+                    <li>
+                        <b id="redtext" class="italic"> Legea spaţiului: </b> y(t) = v
+                        <sub>0</sub>t-(gt
+                        <sup>2</sup>)/2
+                    </li>
+                    <li>
+                        <b id="redtext" class="italic"> Formula lui Galilei: </b> v
+                        <sup>2</sup> = v<sub>0</sub>
+                        <sup>2</sup>-2gy
+                    </li>
+                </ul>
+            </h2>
+            <h2>
+                <b id="bluetext" class="italic"> Observaţii: </b>Pe baza acestor ecuaţii se calculează înălţimea maximă h
+                <sub>max</sub> şi timpul de urcare t
+                <sub>u</sub>.
+                <ul>
+                    <li>
+                        Dacă în legea vitezei impunem condiţia de oprire(v=0) =>timpul de urcare t
+                        <sub>u</sub> = v
+                        <sub>0</sub>/g.
+
+                    </li>
+                    <li>
+                        Dacă în formula lui Galilei impunem condiţia de oprire (v=0, când y=h
+                        <sub>max</sub> ) => <br> înălţimea maximă H = v
+                        <sub>0</sub>
+                        <sup>2</sup>/2g.
+                    </li>
+                </ul>
+            </h2>
+        </div></div>
+        <div id="text4">
+            <h1>
+                Aruncarea corpurilor pe verticală de sus în jos
+            </h1>
+            <div id="indent"><h2>
+                Considerăm un corp căruia i se imprimă viteza iniţială v
+                <sub>0</sub> de sus în jos. Dacă neglijăm forţele de frecare cu aerul, corpul efectuează o
+                <b id="redtext" class="italic"> mişcare rectilinie uniform accelerată, cu acceleraţia a=g.</b>
+            </h2>
+            <p align="center">
+                <img src="img/img32.png" />
+            </p>
+            <h2>
+                Legile specifice în aruncarea pe verticală de sus în jos se exprimă conform relaţiilor:
+                <ul>
+                    <li>Legea vitezei: v(t)=v
+                        <sub>0</sub> +gt </li>
+                    <li>Legea spaţiului:
+                        <img src="img/img33.png" style="width: 150px;height:auto;" align="middle"/></li>
+                    <li>Formula lui Galilei:v
+                        <sup>2</sup> = v
+                        <sub>0</sub>
+                        <sup>2</sup> + 2gy </li>
+                </ul>
+            </h2>
+            <h2>
+                &#x25BA;Observaţii:
+                <ul>
+                    <li>Timpul de coborare se poate obţine din legea vitezei :
+                        <img src="img/img34.png" align="middle"/>
+                    </li>
+                    <li>Viteza finală atinsă de corp la suprafaţa solului se obţine din formula lui Galilei, impunând y=H, de
+                        unde
+                        <img src="img/img35.png" style="width:200px;height:auto;" align="middle"/>
+                    </li>
+                </ul>
+            </h2>
+        </div>
+    </div> </div>
+    <script>
+        function deschidere() {
+            document.getElementById("mySidenav").style.marginLeft = "0px";
+        }
+
+        function inchidere() {
+            document.getElementById("mySidenav").style.marginLeft = "-500px";
+        }
+    </script>
+</body>
+
+</html>

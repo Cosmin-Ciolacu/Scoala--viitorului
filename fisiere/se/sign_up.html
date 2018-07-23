@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+    <style>
+    body{
+        background: url(img/fundal.png);
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+    <div class="titlu"> INSCRIE-TE IN COMUNITATEA NOASTRA! </div>
+    <br />
+    <br>
+    <br>
+    <br />
+    <br>
+    <br>
+    <div id="login">
+       
+        <form method="POST" action="php/signup.php" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="email">Nume de utilizator:</label>
+                <input type="text" name="username" class="form-control" id="username">
+                <span id="msg"></span>
+              </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" class="form-control" id="email">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Parola:</label>
+                <input type="password" name="parola" class="form-control" id="pwd">
+              </div>
+              <div class="form-group">
+                <label for="email">Poza de profil:</label>
+                <input type="file" name="pp" style="height: 40px;" class="form-control" id="pp" required accept=".jpg,.png">
+              </div>
+              <div class="form-group">
+                  <label>Tip cont</label>
+                  <select name="tip">
+                      <option>
+                          Elev
+                      </option>
+                      <option>
+                          Profesor
+                      </option>
+                  </select>
+              </div>
+           <div class="form-group">
+            <button type="submit" class="btn btn-outline-success btn-block">Creare cont</button>
+           </div>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    $(document).ready(function(){
+        $('#username').keyup(function(){
+            $.ajax({
+                url:'php/username.php',
+                method:"POST",
+                data:{username:$('#username').val()},
+                success:function(data){
+                    $('#msg').html(data);
+                }
+            });
+        });
+        $('.btn').on('mouseenter',function(){
+            $('.btn').addClass('btn btn-success');
+        });
+    });
+</script>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>Autentificare</title>
+    <style>
+        body{
+            background: url(img/bg.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="titlu">Autentificare</div>
+    <br />
+    <br>
+    <br>
+    <br />
+    <br>
+    <br>
+    <div id="login">
+        <form id="form" action="php/autentificare.php" method="POST">
+            <div class="form-group">
+                <label for="email">Nume de utilizator:</label>
+                <input type="text" name="username" class="form-control" id="username">
+                <span id="msg"></span>
+              </div>
+            <div class="form-group">
+                <label for="email">Parola:</label>
+                <input type="password" name="parola" class="form-control" id="parola">
+            </div>
+            <div class="form-group">
+                    <label>Tip cont</label>
+                    <select name="tip" id="tip">
+                        <option>
+                            Elev
+                        </option>
+                        <option>
+                            Profesor
+                        </option>
+                    </select>
+                </div>
+            <div class="form-group">
+                <button class="btn btn-outline-success btn-block elev">Autentifica-te</button>
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show" style="display: none;"></div>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    $(document).ready(function(){
+        $('.btn').on('mouseenter',function(){
+            $('.btn').addClass('btn btn-success');
+        });
+        /*
+        $('#form').on('submit', function(event){
+            event.preventDefault();
+            $.ajax({
+                url:"php/autentificare.php",
+                method:"POST",
+                contentType:false,
+                //cache:false,
+                processData:false,
+                data:new FormData(this),
+                success:function(data){
+                    console.log($('#tip').val());
+                    if(data == '1') {
+                        if($('#tip').val() == 'Profesor') {
+                            window.location = 'prof.php';
+                        } else {
+                            window.location = 'elev.php';
+                        }
+                    } else {
+                        $('.alert').css("display","block");
+                        $('.alert').html(data);
+                    }
+                }
+            })
+        });
+        */
+    });
+</script>

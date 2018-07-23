@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Skranji" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/adauga.js"></script>
+    <title>Document</title>
+    <style>
+            body{
+                background: #f1f1f1;
+            }
+            #header{
+                background: url(img/header.jpg);
+                background-size: cover;
+            }
+            </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="bar">
+            <span style="font-size:30px;cursor:pointer;color:#c99e10;position:fixed; /*float:left*/left:0;" onclick="deschidere()">&#9776; Meniu</span>
+            <div id="item">
+                <i class="material-icons">search</i>
+            </div>
+        </div>
+        <div class="text">ADAUGA ELEVI</div>
+        <div id="mySidenav" class="meniu">
+            <a href="javascript:void(0)" class="closebtn" onclick="inchidere()">&times;</a>
+            <a href="adauga.html">ADAUGA CLASE SAU ELEVI</a>
+            <a href="clase.php">CLASELE MELE</a>
+            <a href="deconectare.php">DECONECTARE</a>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <br />
+        <br />
+        <br />
+        <div align="right" style="margin-bottom:5px;">
+            <button type="button" name="add" id="add" class="btn btn-success btn-xs">ADAUGA</button>
+        </div>
+        <br />
+        <form method="post" id="user_form">
+            <div class="form-group">
+                    <label>Adauga in clasa:</label>
+                    <select name="clasa" id="clasa" class+"form-control"></select>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered" id="user_data">
+                    <tr>
+                        <th>NUME ELEV</th>
+                        <th>EMAIL</th>
+                        <th>EDITARE</th>
+                        <th>STERGERE</th>
+                    </tr>
+                </table>
+            </div>
+            <div align="center">
+                <input type="submit" name="insert" id="insert" class="btn btn-primary" value="Terminare" />
+            </div>
+        </form>
+
+        <br />
+    </div>
+    <div id="user_dialog" title="Add Data">
+        <div class="form-group">
+            <label>INTRODU NUMELE ELEVULUI</label>
+            <input type="text" name="first_name" id="first_name" class="form-control" />
+            <span id="error_first_name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>INTRODU EMAILUL ELEVULUI</label>
+            <input type="text" name="last_name" id="last_name" class="form-control" />
+            <span id="error_last_name" class="text-danger"></span>
+        </div>
+        <div class="form-group" align="center">
+            <input type="hidden" name="row_id" id="hidden_row_id" />
+            <button type="button" name="save" id="save" class="btn btn-info">SALVARE</button>
+        </div>
+    </div>
+    <div id="action_alert" title="Action">
+
+    </div>
+    <div id="searchbox">
+        <input type="text" id="cautare" name="cautare" placeholder="Cauta elevi sau lectii" >
+        <div id="rezultat"></div>
+    </div>
+</body>
+
+</html>
