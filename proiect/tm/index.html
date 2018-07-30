@@ -1,0 +1,187 @@
+<html>
+
+<head>
+		<meta charset="UTF-8">
+	<style>
+		.tot1 {
+			margin-top: 10%;
+			height: 10px;
+			width: fit-content;
+            padding: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 15%;
+			text-align: center;
+		}
+
+		#vid {
+			z-index: -1;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			overflow: none;
+			top: 0;
+			left: 0;
+			position: fixed;
+		}
+
+		.titlu {
+			margin-top: 10%;
+			height: 100px;
+			font-family: Engravers MT;
+			font-size: 50px;
+			text-align: center;
+			color: white;
+			-webkit-text-stroke: 1.5px blue;
+			-webkit-animation-duration: 0.5s;
+			-webkit-animation-delay: 2s;
+		}
+
+		a {
+			color: black;
+		}
+		
+		#forum {
+		    transition: 0.5s;
+		    transform-origin: center center;
+			width: 300px;
+			height: 200px;
+			font-family: arial;
+			font-size: 20px;
+			background-color: rgba(250,250,250, 0.6);
+			float: left;
+			margin-left: 120px;
+			text-align: center;
+		}
+
+		#ie {
+		    transition: 0.3s;
+		    transform-origin: center center;
+			width: 250px;
+			height: 100px;
+			font-family: arial;
+			font-size: 20px;
+			color:#000b29;
+			background-color: #f8f5f2;
+			float: left;
+			margin-left: 20px;
+			border: 1px solid #f8f5f2;
+			text-align: center;
+		}
+		
+		#ie:hover{
+		    height: 150px;
+			border: 1px solid #000b29;
+		}
+		
+		#goTo{
+		    display:none;
+		    margin-top: 50px;
+		    width: 150px;
+		    height: 30px;
+		    float:right;
+		    margin-right: 20px;
+		    position: relative;
+		    background-color:#d70026;
+		}
+		
+		#ie:hover #goTo{
+		    display: block;
+		}
+		
+		#ie:hover #align{
+		    top:0%;
+		    transform: translateY(0%);
+		    background-color:#d70026;
+		}
+		
+		#align-text{
+		    top: 50%;
+		    transform: translateY(-50%);
+		    position: relative;
+		}
+		
+		#align{
+		    top: 50%;
+		    transform: translateY(-50%);
+		    position: relative;
+		    transition: 0.3s;
+		}
+		@media (max-width: 1367px){
+		    body{
+		        zoom: 80%;
+		    }
+		}
+	</style>
+</head>
+
+<body>
+	<div class="titlu">
+		TIPURI DE MIȘCĂRI ÎN MECANICA CLASICĂ
+	</div>
+	<div class="tot1">
+			<div id="ie"><div id="align">
+			   MIȘCAREA RECTILINIE UNIFORMĂ
+			</div>
+			
+		<a href="mru.html">
+			<div id="goTo">
+			    <div id="align-text">
+			    Notiuni teoretice
+			    </div>
+			</div>
+			
+        </a>
+			</div>
+			<div id="ie"><div id="align">
+			   MIȘCAREA RECTILINIE UNIFORMĂ VARIATĂ
+			</div>
+			
+        <a href="mruv.html">
+			<div id="goTo">
+			    <div id="align-text">
+			    Du-ma la lectie
+			    </div>
+			</div>
+        </a>
+			</div>
+			<div id="ie"><div id="align">
+			   MIȘCĂRI ÎN CĂMP GRAVITAȚIONAL UNIFORM
+			</div>
+        <a href="mcgu.html">
+			<div id="goTo">
+			    <div id="align-text">
+			    Du-ma la lectie
+			    </div>
+			</div>
+        </a>
+			</div>
+			<div id="ie"><div id="align">
+			   MIȘCĂRI COMPUSE
+			</div>
+        <a href="mc.html">
+			<div id="goTo">
+			    <div id="align-text">
+			    Du-ma la lectie
+			    </div>
+			</div>
+        </a>
+			</div>
+			<div id="ie"><div id="align">
+			   MIȘCAREA CIRCULARĂ UNIFORMĂ
+			</div>
+        <a href="mcrc.html">
+			<div id="goTo">
+			    <div id="align-text">
+			    Du-ma la lectie
+			    </div>
+			</div>
+		</a>
+			</div>
+		
+	</div>
+	<video src="bgvideo2.mp4" id="vid" autoplay loop></video>
+</body>
+
+</html>

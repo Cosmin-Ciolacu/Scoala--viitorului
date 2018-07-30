@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+    body{
+        background: url(img/fundal.png);
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+    <div class="titlu" style="margin-top:6%;"> INSCRIE-TE IN COMUNITATEA NOASTRA! </div>
+    <div id="login" style="margin-top:4%;">
+       
+        <form method="POST" id="form" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="email">Nume de utilizator:</label>
+                <input type="text" name="username" class="form-control" id="username">
+                <span id="msg"></span>
+              </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" class="form-control" id="email">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Parola:</label>
+                <input type="password" name="parola" class="form-control" id="pwd">
+              </div>
+              <div class="form-group">
+                <label for="email">Poza de profil:</label>
+                <input type="file" name="fisier" style="height: 40px;" class="form-control" id="pp" required accept=".jpg,.png">
+              </div>
+              <div class="form-group" id="tip">
+                 <label>Tip cont</label>
+                   <select name="tip" id="tip">
+                      <option value="Elev">
+                          Elev
+                      </option>
+                      <option selected="selected" value="Profesor">
+                          Profesor
+                      </option>
+                  </select>
+              </div>
+              <div class="form-group clasa" style="display:none";>
+                <label>Clasa</label>
+                  <select name="clasa">
+                     <option>
+                         a-IX-a
+                     </option>
+                     <option>
+                         a-X-a
+                     </option>
+                     <option>
+                        a-XI-a
+                    </option> 
+                    <option>
+                        a-XII-a
+                    </option>
+                 </select>
+             </div>
+           <div class="form-group">
+            <button type="submit" class="btn btn-outline-success btn-block">Creare cont</button>
+           </div>
+        </form>
+    </div>
+    <div class="modal" id="loading">
+        <div class="modal-dialog">
+            <div class="modal-content">
+    
+                <div class="modal-header">
+                    <h4 class="modal-title">Incarcare</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+    
+                <div class="modal-body">
+                    <!--<p><center><img src="img/loading.gif" /> </center></p>-->
+                    <center><div class="incarcare"></div></center>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $(document).ready(function(){
+        $('#username').keyup(function(){
+            $.ajax({
+                url:'php/username.php',
+                method:"POST",
+                data:{username:$('#username').val()},
+                success:function(data){
+                    $('#msg').html(data);
+                }
+            });
+        });
+        $('#tip').on('change', function(){
+            $( "select option:selected" ).each(function() {
+                if($(this).val() == 'Elev') {
+                   // alert('ok');
+                    $('div .clasa').css('display', 'block');
+                }
+            });
+        });
+        $('#form').on('submit', function (event) {
+            event.preventDefault();
+            $.ajax({
+                url:"php/signup.php",
+                method:"POST",
+                contentType:false,
+                //cache:false,
+                processData:false,
+                data:new FormData(this),
+                beforeSend:function () {
+                    $('#loading').modal('show');
+                },
+                success:function (data) {
+                    console.log(data);
+                    alert('Va multumim ca v-ati inscris in comunitatea noastra!' + '\nVeti primi un mail pentru a va confirma crearea contului!');
+                    window.location = "login.html";
+                }
+            });
+        });
+        $('.btn').on('mouseenter',function(){
+            $('.btn').addClass('btn btn-success');
+        });
+    });
+</script>
